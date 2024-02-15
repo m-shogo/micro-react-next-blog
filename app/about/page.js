@@ -1,4 +1,4 @@
-import Meta from "components/meta";
+// import Meta from "components/meta";
 import Container from "components/container";
 import Hero from "components/hero";
 import PostBody from "components/post-body";
@@ -15,13 +15,13 @@ import eyecatch from "images/about.jpg";
 export default function About() {
   return (
     <Container>
-      <Meta 
+      {/* <Meta 
         pageTitle="アバウト" 
         pageDesc="About page"
         pageImg={eyecatch.src}
         pageImgW={eyecatch.width}
         pageImgH={eyecatch.height}
-      />
+      /> */}
       <Hero title="About" subtitle="About development activities" />
       <figure>
         <Image

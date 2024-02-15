@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useRef } from "react";
 import styles from "styles/accordion.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

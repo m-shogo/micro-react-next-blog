@@ -4,8 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "styles/nav.module.css";
 
-// これは不要です。useClient()を削除します。
-
 export default function Nav() {
   const [navIsOpen, setNavIsOpen] = useState(false);
 
