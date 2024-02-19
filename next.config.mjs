@@ -2,15 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    //domains: ['images.microcms-assets.io'],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.microcms-assets.io",
-        port: "",
-        pathname: "/assets/m-shogo-cube-blog/**",
-      },
-    ],
+    domains: ["images.microcms-assets.io"],
+    // remotePatterns: [
+    //   {
+    //     protocol: "https",
+    //     hostname: "images.microcms-assets.io",
+    //     port: "",
+    //     pathname: "/assets/m-shogo-cube-blog/**",
+    //   },
+    // ],
   },
 };
 
