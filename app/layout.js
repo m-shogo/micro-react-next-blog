@@ -23,6 +23,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang={siteLang}>
       <body>
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
         <Layout>{children}</Layout>
       </body>
     </html>
