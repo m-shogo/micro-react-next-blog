@@ -14,6 +14,7 @@ import PostCategories from "components/post-categories";
 import Pagination from "components/pagination";
 import Image from "next/legacy/image";
 import { getPlaiceholder } from "plaiceholder";
+import cube from "images/cube.jpg";
 
 // ローカルの代替アイキャッチ画像
 import { eyecatchLocal } from "lib/constants";
@@ -36,8 +37,8 @@ export default async function Post({ params }) {
 
   const eyecatch = post.eyecatch ?? eyecatchLocal;
 
-  const { base64 } = await getPlaiceholder(eyecatch.url);
-  eyecatch.blurDataURL = base64;
+  // const { base64 } = await getPlaiceholder(eyecatch.url);
+  // eyecatch.blurDataURL = base64;
 
   const allSlugs = await getAllSlugs();
   const [prevPost, nextPost] = prevNextPost(allSlugs, slug);
@@ -57,7 +58,7 @@ export default async function Post({ params }) {
             sizes="(min-width: 1152px) 1152px,100vw"
             priority
             placeholder="blur"
-            blurDataURL={eyecatch.blurDataURL}
+            blurDataURL={cube}
           />
         </figure>
         <TwoColumn>

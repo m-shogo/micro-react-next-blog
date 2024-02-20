@@ -1,5 +1,4 @@
 import { getAllPosts } from "lib/api";
-// import Meta from "components/meta"
 import Container from "components/container";
 import Hero from "components/hero";
 import Posts from "components/posts";
@@ -16,14 +15,12 @@ export default async function Home() {
     if (!post.hasOwnProperty("eyecatch")) {
       post.eyecatch = eyecatchLocal;
     }
-    const { base64 } = await getPlaiceholder(post.eyecatch.url);
-    post.eyecatch.blurDataURL = base64;
+    // const { base64 } = await getPlaiceholder(post.eyecatch.url);
+    // post.eyecatch.blurDataURL = base64;
   }
 
   return (
     <Container>
-      {/* <Meta /> */}
-
       <Hero title="CUBE" subtitle="アウトプットしていくサイト" imageOn />
 
       <Posts posts={posts} />

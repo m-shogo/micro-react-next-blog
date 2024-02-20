@@ -1,6 +1,7 @@
 import styles from "styles/posts.module.css";
 import Link from "next/link";
 import Image from "next/legacy/image";
+import cube from "images/cube.jpg";
 
 export default function Posts({ posts }) {
   return (
@@ -16,7 +17,7 @@ export default function Posts({ posts }) {
                 objectFit="cover"
                 sizes="(min-width: 1152px) 576px, 50vw"
                 placeholder="blur"
-                blurDataURL={eyecatch.blurDataURL}
+                blurDataURL={cube}
               />
             </figure>
             <h2>{title}</h2>

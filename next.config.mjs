@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["images.microcms-assets.io"],
+    domains: ['images.microcms-assets.io'],
     // remotePatterns: [
     //   {
     //     protocol: "https",
@@ -11,6 +11,10 @@ const nextConfig = {
     //     pathname: "/assets/m-shogo-cube-blog/**",
     //   },
     // ],
+  },
+  env: {
+    SERVICE_DOMAIN: process.env.SERVICE_DOMAIN, // 環境変数の値を参照
+    API_KEY: process.env.API_KEY, // 環境変数の値を参照
   },
 };
 

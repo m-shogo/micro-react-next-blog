@@ -27,8 +27,8 @@ export default async function Category({ params }) {
     if (!post.hasOwnProperty("eyecatch")) {
       post.eyecatch = eyecatchLocal;
     }
-    const { base64 } = await getPlaiceholder(post.eyecatch.url);
-    post.eyecatch.blurDataURL = base64;
+    // const { base64 } = await getPlaiceholder(post.eyecatch.url);
+    // post.eyecatch.blurDataURL = base64;
   }
 
   return (

@@ -8,11 +8,11 @@ import { getPlaiceholder } from "plaiceholder";
 import { eyecatchLocal } from "lib/constants";
 
 // サイトに関する情報
-import { siteMeta } from 'lib/constants'
-const { siteTitle, siteUrl } = siteMeta
+import { siteMeta } from "lib/constants";
+const { siteTitle, siteUrl } = siteMeta;
 
 // ベースのメタデータ
-import { openGraphMetadata, twitterMetadata } from 'lib/baseMetadata'
+import { openGraphMetadata, twitterMetadata } from "lib/baseMetadata";
 
 export default async function Blog() {
   const posts = await getAllPosts();
@@ -21,10 +21,10 @@ export default async function Blog() {
     if (!post.hasOwnProperty("eyecatch")) {
       post.eyecatch = eyecatchLocal;
     }
-    const { base64 } = await getPlaiceholder(post.eyecatch.url);
-    post.eyecatch.blurDataURL = base64;
+    // const { base64 } = await getPlaiceholder(post.eyecatch.url);
+    // post.eyecatch.blurDataURL = base64;
   }
-  
+
   return (
     <Container>
       <Hero title="Blog" subtitle="Recent Posts" />
@@ -35,10 +35,10 @@ export default async function Blog() {
 }
 
 // メタデータ
-const pageTitle = 'ブログ'
-const pageDesc = 'ブログの記事一覧'
-const ogpTitle = `${pageTitle} | ${siteTitle}`
-const ogpUrl = new URL('/blog', siteUrl).toString()
+const pageTitle = "ブログ";
+const pageDesc = "ブログの記事一覧";
+const ogpTitle = `${pageTitle} | ${siteTitle}`;
+const ogpUrl = new URL("/blog", siteUrl).toString();
 
 export const metadata = {
   title: pageTitle,
@@ -56,4 +56,4 @@ export const metadata = {
     title: ogpTitle,
     description: pageDesc,
   },
-}
+};
