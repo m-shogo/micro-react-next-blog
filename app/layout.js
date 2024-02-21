@@ -2,6 +2,7 @@ import { Suspense } from "react";
 
 import {
   baseMetadata,
+  viewportMetadata,
   openGraphMetadata,
   twitterMetadata,
 } from "lib/baseMetadata";
@@ -40,4 +41,8 @@ export const metadata = {
   twitter: {
     ...twitterMetadata,
   },
+};
+
+export const viewport = {
+  ...viewportMetadata,
 };
