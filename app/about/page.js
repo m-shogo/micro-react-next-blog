@@ -8,15 +8,15 @@ import {
   TwoColumnSidebar,
 } from "components/two-column";
 import Accordion from "components/accordion";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import eyecatch from "images/about.jpg";
 
 // サイトに関する情報
-import { siteMeta } from 'lib/constants'
-const { siteTitle, siteUrl } = siteMeta
+import { siteMeta } from "lib/constants";
+const { siteTitle, siteUrl } = siteMeta;
 
 // ベースのメタデータ
-import { openGraphMetadata, twitterMetadata } from 'lib/baseMetadata'
+import { openGraphMetadata, twitterMetadata } from "lib/baseMetadata";
 
 export default function About() {
   return (
@@ -25,16 +25,17 @@ export default function About() {
       <figure>
         <Image
           src={eyecatch}
-          alt=""
-          layout="responsive"
-          sizes="(min-width: 1152px) 1152px, 100vw"
-          priority
-          placeholder="blur"
+          alt="About"
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
         />
       </figure>
       <TwoColumn>
         <TwoColumnMain>
-        <PostBody>
+          <PostBody>
             <p>
               Cubeが得意とする分野はモノづくりです。3次元から2次元の造形、プログラミングやデザインなど、さまざまな技術を組み合わせることによって社会や環境と結びつけるクリエイティブを提案し続けています。
             </p>
@@ -77,10 +78,10 @@ export default function About() {
 }
 
 // メタデータ
-const pageTitle = 'アバウト'
-const pageDesc = 'About development activities'
-const ogpTitle = `${pageTitle} | ${siteTitle}`
-const ogpUrl = new URL('/about', siteUrl).toString()
+const pageTitle = "アバウト";
+const pageDesc = "About development activities";
+const ogpTitle = `${pageTitle} | ${siteTitle}`;
+const ogpUrl = new URL("/about", siteUrl).toString();
 
 export const metadata = {
   title: pageTitle,
@@ -105,4 +106,4 @@ export const metadata = {
     description: pageDesc,
     images: [eyecatch.src],
   },
-}
+};

@@ -12,9 +12,8 @@ import {
 import ConvertBody from "components/convert-body";
 import PostCategories from "components/post-categories";
 import Pagination from "components/pagination";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
-import cube from "images/cube.jpg";
 
 // ローカルの代替アイキャッチ画像
 import { eyecatchLocal } from "lib/constants";
@@ -51,14 +50,14 @@ export default async function Post({ params }) {
           <Image
             key={eyecatch.url}
             src={eyecatch.url}
-            alt=""
-            layout="responsive"
+            alt={title}
             width={eyecatch.width}
             height={eyecatch.height}
-            sizes="(min-width: 1152px) 1152px,100vw"
-            priority
-            placeholder="blur"
-            blurDataURL={cube}
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
           />
         </figure>
         <TwoColumn>
