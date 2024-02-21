@@ -1,4 +1,4 @@
-import { getAllCategories, getAllPostsByCategories } from "lib/api";
+import { getAllCategories, getAllPostsByCategory } from "lib/api";
 import Container from "components/container";
 import PostHeader from "components/post-header";
 import Posts from "components/posts";
